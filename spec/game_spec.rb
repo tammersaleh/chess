@@ -1,17 +1,12 @@
 require "game"
+require "string_extensions"
 
-class String
-  def strip_leading_whitespace
-    self.gsub(%r{^\s*}, "")
-  end
-end
-
-describe "the game" do
+describe Game do
   let(:game) { Game.new }
 
   it "displays correctly" do
     expect(game.to_s).to eq(<<-EOS.strip_leading_whitespace)
-      . a b c d e f g h
+        a b c d e f g h
       8 r n b q k b n r
       7 p p p p p p p p
       6 . . . . . . . .
@@ -30,7 +25,7 @@ describe "the game" do
 
     it "displays correctly" do
       expect(game.to_s).to eq(<<-EOS.strip_leading_whitespace)
-        . a b c d e f g h
+          a b c d e f g h
         8 r n b q k b n r
         7 p p p p p p p p
         6 . . . . . . . .

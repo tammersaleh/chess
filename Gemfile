@@ -1,5 +1,11 @@
 source "https://rubygems.org"
 
-gem "rspec"
-gem "guard"
-gem "guard-rspec"
+group :development do
+  gem "rspec"
+  gem "guard"
+  gem "guard-rspec"
+  gem "guard-bundler"
+
+  gem 'rb-fsevent'
+  gem 'terminal-notifier-guard'
+end
