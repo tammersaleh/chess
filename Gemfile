@@ -8,4 +8,6 @@ group :development do
 
   gem 'rb-fsevent'
   gem 'terminal-notifier-guard'
+
+  gem 'turnip'
 end
